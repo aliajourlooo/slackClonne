@@ -188,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="900" y="382"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="34f-6B-gy4">
             <objects>
-                <viewController id="k3w-n0-zR4" sceneMemberID="viewController">
+                <viewController id="k3w-n0-zR4" customClass="LoginVC" customModule="slack_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nk8-xf-n5k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,9 +211,12 @@
                                     <constraint firstAttribute="height" constant="50" id="A8E-sS-m0g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="k3w-n0-zR4" eventType="touchUpInside" id="xrV-uN-Zyc"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6tt-0T-wIe">
                                 <rect key="frame" x="16" y="80" width="343" height="210"/>
@@ -286,6 +289,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AQm-xn-j36"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="YKt-on-y1f" id="d36-gS-llB"/>
+                        <outlet property="userNameTxtField" destination="Ibd-TD-RRl" id="b1c-K7-ZF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccv-X0-rCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
