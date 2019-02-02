@@ -127,10 +127,38 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbk-fJ-l57">
                                 <rect key="frame" x="122" y="591" width="44" height="30"/>
                                 <state key="normal" title="Profile"/>
+                                <connections>
+                                    <segue destination="k3w-n0-zR4" kind="show" id="LwQ-dg-jSH"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-zE-h1D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-zE-h1D">
                                 <rect key="frame" x="8" y="104.5" width="359" height="448.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="geb-oh-OlM" customClass="ChannelCell" customModule="slack_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="geb-oh-OlM" id="2xX-xv-ofO">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="54.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALL-2p-eSi">
+                                                    <rect key="frame" x="15" y="19" width="68" height="16.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ALL-2p-eSi" firstAttribute="top" secondItem="2xX-xv-ofO" secondAttribute="topMargin" constant="8" id="bH4-71-qQS"/>
+                                                <constraint firstItem="ALL-2p-eSi" firstAttribute="centerY" secondItem="2xX-xv-ofO" secondAttribute="centerY" id="doV-Gk-2c4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="ALL-2p-eSi" id="Z2R-Xe-094"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,10 +178,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9hi-em-8fV"/>
                     </view>
+                    <connections>
+                        <outlet property="channelTableView" destination="cYM-zE-h1D" id="97j-2f-tPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZF-AB-DB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="861.60000000000002" y="381.85907046476763"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="34f-6B-gy4">
+            <objects>
+                <viewController id="k3w-n0-zR4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nk8-xf-n5k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AQm-xn-j36"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccv-X0-rCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="382"/>
         </scene>
     </scenes>
     <resources>

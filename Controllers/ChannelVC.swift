@@ -11,6 +11,7 @@ class ChannelVC: UIViewController {
     
     //MARK: OUTLETS
 
+    @IBOutlet weak var channelTableView: UITableView!
     
     
     //MARK: Variables
