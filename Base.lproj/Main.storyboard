@@ -466,6 +466,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HS5-Kb-8ns"/>
                     </view>
+                    <connections>
+                        <outlet property="emaiilTxtField" destination="IrM-oQ-ZHN" id="ZmH-AU-W22"/>
+                        <outlet property="passwordTxtField" destination="aE9-uv-Ibr" id="L2k-FA-Fjw"/>
+                        <outlet property="profileImage" destination="ZVJ-vr-CRm" id="gEb-4p-uOx"/>
+                        <outlet property="usernameTxtField" destination="wgY-Sb-ivd" id="MTd-S8-LBp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPI-YN-Yu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0L7-o4-rS6" userLabel="Exit" sceneMemberID="exit"/>

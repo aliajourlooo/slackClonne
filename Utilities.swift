@@ -9,6 +9,10 @@
 import Foundation
 
 
+//MARK:urls
+let BASE_URL = "https://chattychatchat14.herokuapp.com/v1/"
+let URL_REGISTER = "\(BASE_URL)account/register"
+
 //MARK : Segues
 
 let TO_LOGIN = "tologin"
@@ -20,3 +24,6 @@ let UNWIND_TO_CHANNEL =  "unwindToChannelVC"
 let TOKEN_KEY  = "token"
 let IS_LOGGED_IN =  "isLoggedIn"
 let USER_EMAIL = "userEmail"
+
+//MARK: Complition handler
+typealias complitionHandler  = ((_ success :Bool) -> Void )

@@ -36,6 +36,17 @@ class CreateAccountVC: UIViewController {
     
     }
     @IBAction func createAccountBtnPressed(_ sender: Any) {
+        
+        guard let email = emaiilTxtField.text , emaiilTxtField.text != ""  else {return}
+        guard let pass = passwordTxtField.text , passwordTxtField.text != ""  else {return}
+        AuthService.instance.registerUser(password: pass, email: email) { (success) in
+            if success {
+                print("shode o ok e ")
+                
+            }else {
+                print("nashod")
+            }
+        }
     }
     
     // MARK: - Navigation
