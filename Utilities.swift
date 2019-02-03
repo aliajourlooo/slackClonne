@@ -12,6 +12,7 @@ import Foundation
 //MARK:urls
 let BASE_URL = "https://chattychatchat14.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
+let URL_LOGIN = "\(BASE_URL)account/login"
 
 //MARK : Segues
 
@@ -27,3 +28,8 @@ let USER_EMAIL = "userEmail"
 
 //MARK: Complition handler
 typealias complitionHandler  = ((_ success :Bool) -> Void )
+
+
+//MARK : headers
+
+let HEADER = ["Content-Type" : "application/json; charser=utf-8"]
