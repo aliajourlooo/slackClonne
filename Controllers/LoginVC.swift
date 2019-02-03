@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
     //MARK: OUTLETS
     
     @IBOutlet weak var userNameTxtField: UITextField!
@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -26,7 +26,12 @@ class LoginVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func loginBtnPressed(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "CreateAccountVC", bundle: nil)
+        guard let x = vc.instantiateInitialViewController() else {return}
+        self.present(x, animated: true)
+        
     }
     
-
+    
 }

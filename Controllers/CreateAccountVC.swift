@@ -9,7 +9,7 @@
 import UIKit
 
 class CreateAccountVC: UIViewController {
-
+    
     //MARK : OUTLETS
     
     @IBOutlet weak var profileImage: UIImageView!
@@ -22,7 +22,7 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("CreateAccountVC")
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +33,9 @@ class CreateAccountVC: UIViewController {
     @IBAction func profileImageBtnPressed(_ sender: Any) {
     }
     @IBAction func generateColorBtnPressed(_ sender: Any) {
+    
+    }
+    @IBAction func createAccountBtnPressed(_ sender: Any) {
     }
     
     // MARK: - Navigation
