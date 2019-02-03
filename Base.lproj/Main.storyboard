@@ -324,6 +324,7 @@
                                         <state key="normal" image="closeButton"/>
                                         <connections>
                                             <action selector="closeBtnPressed:" destination="BZd-xo-Azg" eventType="touchUpInside" id="Hlf-Q8-xhc"/>
+                                            <segue destination="0L7-o4-rS6" kind="unwind" identifier="unwindToChannelVC" unwindAction="unwindToChannelVCWithSegue:" id="G3K-EK-qgl"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="qEO-1h-kiP">
@@ -467,6 +468,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPI-YN-Yu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0L7-o4-rS6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2291" y="362"/>
         </scene>

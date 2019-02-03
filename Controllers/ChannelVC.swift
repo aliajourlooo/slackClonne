@@ -14,6 +14,9 @@ class ChannelVC: UIViewController {
     @IBOutlet weak var channelTableView: UITableView!
     @IBOutlet weak var loginBtn: UIButton!
     
+    //UNWIND
+    @IBAction func unwindToChannelVC (segue : UIStoryboardSegue)
+    {}
     
     //MARK: Variables
     override func viewDidLoad() {

@@ -12,3 +12,4 @@ import Foundation
 //MARK : Segues
 
 let TO_LOGIN = "tologin"
+let UNWIND_TO_CHANNEL =  "unwindToChannelVC"
