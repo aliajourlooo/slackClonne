@@ -13,3 +13,10 @@ import Foundation
 
 let TO_LOGIN = "tologin"
 let UNWIND_TO_CHANNEL =  "unwindToChannelVC"
+
+
+
+//MARK: USER DEFUALTS
+let TOKEN_KEY  = "token"
+let IS_LOGGED_IN =  "isLoggedIn"
+let USER_EMAIL = "userEmail"
