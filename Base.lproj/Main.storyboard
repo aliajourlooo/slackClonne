@@ -205,7 +205,7 @@
                                     <action selector="closeBtnPressed:" destination="k3w-n0-zR4" eventType="touchUpInside" id="fda-0j-bVC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g94-yS-Tyu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g94-yS-Tyu" customClass="RoundButton" customModule="slack_Clone" customModuleProvider="target">
                                 <rect key="frame" x="16" y="340" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.57714533805847168" green="0.83043462038040161" blue="0.86667710542678833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -215,6 +215,11 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radios">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginBtnPressed:" destination="k3w-n0-zR4" eventType="touchUpInside" id="L5k-Ab-TcC"/>
                                 </connections>
@@ -397,7 +402,7 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HP-B5-2ce">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HP-B5-2ce" customClass="RoundButton" customModule="slack_Clone" customModuleProvider="target">
                                         <rect key="frame" x="16" y="601" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.57714533810000002" green="0.83043462040000005" blue="0.86667710539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -407,6 +412,11 @@
                                         <state key="normal" title="Create Account">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radios">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="createAccountBtnPressed:" destination="BZd-xo-Azg" eventType="touchUpInside" id="TvA-wZ-4tX"/>
                                         </connections>
