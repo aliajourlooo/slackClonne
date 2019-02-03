@@ -17,10 +17,10 @@ class AuthService {
     var auth_token : String  {
         
         get{
-            return defaults.string(forKey: TOKEN_KEY) as! String
+            return defaults.string(forKey: TOKEN_KEY ) as! String
         }
         set{
-            defaults.set(auth_token, forKey: TOKEN_KEY  )
+            defaults.set(newValue, forKey: TOKEN_KEY  )
         }
     }
     
@@ -39,7 +39,7 @@ class AuthService {
             return defaults.string(forKey: USER_EMAIL) as! String
         }
         set{
-            defaults.set(auth_token, forKey: USER_EMAIL  )
+            defaults.set(newValue, forKey: USER_EMAIL  )
         }
     }
     
@@ -55,7 +55,16 @@ class AuthService {
         Alamofire.request(URL_REGISTER, method: .post, parameters: body , encoding: JSONEncoding.default, headers: HEADER).responseString { (dataResponse) in
             if dataResponse.result.error == nil
             {
-                
+                //we go to Second phase which is loginUser
+                AuthService.instance.loginUser(email: email, password: password, handler: { (success) in
+                    if success {
+                        print("logged successfully")
+                        handler(true)
+                    }else
+                    {
+                        handler(false)
+                    }
+                })
                 print("this is our value  \(dataResponse.result.value)")
                 handler(true)
             }else{
@@ -74,12 +83,12 @@ class AuthService {
             {
                 //parsing data to pull out authToken and setting userDefualts
                 guard let data = response.result.value as? [String:Any] else {return}
-                if let email = data["user"] as? String {
-                    self.userEmail = email
-                }
-                if let token = data["token"] as? String {
-                    self.auth_token = token
-                }
+                guard let email = data["user"] as? String else {return}
+                guard let token = data["token"] as? String else {return}
+                
+                self.userEmail = email
+                self.auth_token = token
+                
                 
                 handler(true)
             }else

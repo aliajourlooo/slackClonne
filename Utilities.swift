@@ -22,7 +22,7 @@ let UNWIND_TO_CHANNEL =  "unwindToChannelVC"
 
 
 //MARK: USER DEFUALTS
-let TOKEN_KEY  = "token"
+let TOKEN_KEY  = "auth"
 let IS_LOGGED_IN =  "isLoggedIn"
 let USER_EMAIL = "userEmail"
 
